@@ -1,6 +1,6 @@
 import { Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { useAuthStore } from './store/authSlice';
+// import { useAuthStore } from './store/authSlice';
 import {Navbar }from './components/common/Navbar';
 import {Sidebar} from './components/common/Sidebar';
 import ProtectedRoute from './components/common/ProtectedRoute';
@@ -20,11 +20,11 @@ const UserManagement = lazy(() => import('./pages/UserManagement'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 
 function App() {
-  const { token } = useAuthStore();
-  const isAuthenticated = !!token;
+  // const { token } = useAuthStore();
+  // const isAuthenticated = !!token;
 
   return (
-    <div className="flex h-screen bg-gray-100">
+    <div className="flex h-screen bg-black text-xs lg:text-sm" style={{fontFamily: 'inherit'}}>
       {<Sidebar />}
       <div className="flex-1 flex flex-col overflow-hidden">
         {<Navbar />}
