@@ -30,7 +30,7 @@ export default function Login() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+    <div className="absolute w-[400px] h-[400px] bg-cyan-500/20 rounded-full blur-3xl top-[100px] left-[-100px]">
       <div className="bg-white p-8 rounded shadow-md w-96">
         <h1 className="text-2xl font-bold text-center text-blue-600 mb-6">AquaSmart</h1>
         <form onSubmit={handleSubmit}>
