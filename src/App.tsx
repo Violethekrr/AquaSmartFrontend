@@ -6,7 +6,7 @@ import {Sidebar} from './components/common/Sidebar';
 import ProtectedRoute from './components/common/ProtectedRoute';
 import {Spinner} from './components/common/Spinner';
 
-const Login = lazy(() => import('./pages/Login'));
+const Login = lazy(() => import('./pages/Conne'));
 const Dashboard = lazy(() => import('./pages/Dashboard'));
 const Sensors = lazy(() => import('./pages/Sensors'));
 const WaterQuality = lazy(() => import('./pages/WaterQuality'));

@@ -17,11 +17,11 @@ const navItems = [
 
 export const Sidebar: React.FC = () => {
   return (
-    <aside className="w-50  text-white flex flex-col rounded-xl m-2 border-2 border-[#055DBF]/30 bg-linear-to-r from-[#055DBF]/20 to-[#014EAE]/20 ">
-      <div className="p-4 text-2xl font-bold border-b border-gray-700">
+    <aside className="w-55  text-white flex flex-col rounded-xl m-2 border-2 border-[#055DBF]/30 bg-linear-to-r from-[#055DBF]/20 to-[#014EAE]/20 ">
+      <div className="p-2 text-2xl font-bold text-center border-b border-gray-700">
         AquaSmart
       </div>
-      <nav className="flex-1 mt-4">
+      <nav className="flex-1">
         {navItems.map((item) => {
           const Icon = item.icon;
           return (
@@ -29,12 +29,12 @@ export const Sidebar: React.FC = () => {
               key={item.path}
               to={item.path}
               className={({ isActive }) =>
-                `flex items-center gap-3 px-4 py-3 hover:bg-gray-700 transition ${
-                  isActive ? 'bg-gray-700 border-l-4 border-blue-500' : ''
+                `flex items-center gap-3 px-4 py-3 hover:bg-gray-700 transition m-2 rounded-lg ${
+                  isActive ? 'font-bold bg-linear-to-r from-[#055DBF] to-[#014EAE]' : ''
                 }`
               }
             >
-              <Icon size={16} className="flex-shrink-0" />
+              <Icon size={16} className="flex-shrink-0 " />
               <span>{item.label}</span>
             </NavLink>
           );
