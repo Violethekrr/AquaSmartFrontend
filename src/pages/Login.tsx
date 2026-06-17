@@ -22,12 +22,13 @@ export default function Login() {
     setError('');
     setLoading(true);
     try {
-      const { access_token } = await login(email, password);
-      // Pour simplifier, on stocke un user fictif, mais backend devrait retourner user
-      setAuth(access_token, { email });
+        
+      const { access_token, user } = await login(email, password);
+  
+      setAuth(access_token, user);
       navigate('/');
-    } catch (err) {
-      setError(err.response?.data?.detail || 'Échec de connexion');
+    } catch (err: any) {
+      setError(err.response?.data?.error || 'Échec de connexion');
     } finally {
       setLoading(false);
     }

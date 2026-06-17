@@ -1,12 +1,12 @@
 import { Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
-// import { useAuthStore } from './store/authSlice';
+import { useAuthStore } from './store/authSlice';
 import {Navbar }from './components/common/Navbar';
 import {Sidebar} from './components/common/Sidebar';
 import ProtectedRoute from './components/common/ProtectedRoute';
 import {Spinner} from './components/common/Spinner';
 
-const Login = lazy(() => import('./pages/Conne'));
+const Login = lazy(() => import('./pages/Login'));
 const Dashboard = lazy(() => import('./pages/Dashboard'));
 const Sensors = lazy(() => import('./pages/Sensors'));
 const WaterQuality = lazy(() => import('./pages/WaterQuality'));
@@ -20,15 +20,15 @@ const UserManagement = lazy(() => import('./pages/UserManagement'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 
 function App() {
-  // const { token } = useAuthStore();
-  // const isAuthenticated = !!token;
+  const { token } = useAuthStore();
+  const isAuthenticated = !!token;
 
   return (
-    <div className="flex h-screen bg-black text-xs lg:text-sm" style={{fontFamily: 'inherit'}}>
-      {<Sidebar />}
-      <div className="flex-1 flex flex-col overflow-hidden">
-        {<Navbar />}
-        <main className="flex-1 overflow-y-auto p-4">
+    <div className="flex h-screen bg-black text-xs lg:text-sm bg-center bg-cover" style={{fontFamily: 'inherit', backgroundImage: 'url("/2.jpg")',}}>
+      { isAuthenticated && <Sidebar />}
+      <div className={`flex-1 flex flex-col overflow-hidden border-2 border-[#055DBF]/30 m-2 rounded-xl bg-linear-to-b from-[#055DBF]/10 via-[#014EAE]/15 to-[#003D7E]/20`}>
+        { isAuthenticated && <Navbar />}
+        <main className="flex-1 overflow-y-auto p-4 ">
           <Suspense fallback={<Spinner />}>
             <Routes>
               <Route path="/login" element={<Login />} />
