@@ -6,7 +6,7 @@ import { login } from '../services/authService';
 import { Button } from '../components/common/Button';
 import { Alert } from '../components/common/Alert';
 import { bg } from '../utils/constants';
-import logoAqua from '../assets/logoAqua.png'
+
 import vagueAqua  from '../assets/vagueAqua.png'
 
 export default function Login() {
@@ -38,7 +38,7 @@ return (
   <div className={`
     h-full
     overflow-hidden
-    ${bg}
+
     flex
     items-center
     justify-center
@@ -78,13 +78,14 @@ return (
 <div className='mb-16'>
 
 <img
-  src={logoAqua}
+  src='/logoAqua.png'
   alt="AquaSmart"
   className="
     relative
     z-10
     w-32
     md:w-44
+    xl:w-60
     mb-4
   "
 />
@@ -110,7 +111,7 @@ return (
       className={
         index < 4
         ? "text-white"
-        : "text-[#00BFFF]"
+        : "text-[#055DBF]"
       }
 
       animate={{
@@ -143,7 +144,7 @@ return (
           relative
           z-10
         ">
-          Smart Water Management System
+          Système intelligent de gestion de l'eau
         </p>
         </div>
 
@@ -182,7 +183,8 @@ return (
         <h2 className="
           text-white
           text-2xl
-          font-semibold
+          lg:text-4xl
+          font-bold
           mb-2
         ">
           Bienvenue !
@@ -209,7 +211,7 @@ return (
 
             <label className="
               text-gray-300
-              text-xs
+              
               block
               mb-2
             ">
@@ -224,15 +226,15 @@ return (
               className="
                 w-full
                 h-10
-                rounded
-                bg-[#081c2c]
+                rounded-lg
+                bg-gray-900/50 
                 border
-                border-[#17415f]
+                border-[#055DBF]/20
                 px-3
                 text-white
                 text-sm
                 outline-none
-                focus:border-[#00BFFF]
+                focus:border-[#055DBF]/40
               "
               required
             />
@@ -249,7 +251,7 @@ return (
 
             <label className="
               text-gray-300
-              text-xs
+              
               block
               mb-2
             ">
@@ -265,15 +267,15 @@ return (
               className="
                 w-full
                 h-10
-                rounded
-                bg-[#081c2c]
+                rounded-lg
+                bg-gray-900/50 
                 border
-                border-[#17415f]
+                border-[#055DBF]/20
                 px-3
                 text-white
                 text-sm
                 outline-none
-                focus:border-[#00BFFF]
+                focus:border-[#055DBF]/40
               "
               required
             />
@@ -291,7 +293,7 @@ return (
             flex
             justify-between
             items-center
-            text-xs
+            
             mb-6
           ">
 
@@ -312,7 +314,7 @@ return (
 
 
             <span className="
-              text-[#00BFFF]
+              text-[#055DBF]
             ">
               Mot de passe oublié ?
             </span>
@@ -345,11 +347,14 @@ return (
     w-full
     h-10
     mt-2
-    rounded-md
-    bg-[#007BFF]
-    hover:bg-[#00BFFF]
+    rounded-lg
+    hover:scale-105
+    duration-300
+    bg-[#055DBF]
+   
     text-white
-    transition
+    transition-all
+    cursor-pointer
   "
 >
   Se connecter

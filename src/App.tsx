@@ -18,6 +18,7 @@ const SaltManagement = lazy(() => import('./pages/SaltManagement'));
 const SystemConfig = lazy(() => import('./pages/SystemConfig'));
 const UserManagement = lazy(() => import('./pages/UserManagement'));
 const NotFound = lazy(() => import('./pages/NotFound'));
+const Orders = lazy(() => import('./pages/Orders'));
 
 function App() {
   const { token } = useAuthStore();
@@ -25,8 +26,12 @@ function App() {
 
   return (
     <div className="flex h-screen bg-black text-xs lg:text-sm bg-center bg-cover" style={{fontFamily: 'inherit', backgroundImage: 'url("/2.jpg")',}}>
+        <div 
+        className="absolute inset-0 -z-0 bg-cover bg-center bg-no-repeat bg-black/85"
+     
+      />
       { isAuthenticated && <Sidebar />}
-      <div className={`flex-1 flex flex-col overflow-hidden border-2 border-[#055DBF]/30 m-2 rounded-xl bg-linear-to-b from-[#055DBF]/10 via-[#014EAE]/15 to-[#003D7E]/20`}>
+      <div className={`flex-1 flex flex-col overflow-hidden z-50 border border-[#055DBF]/20 m-2 rounded-xl bg-linear-to-b from-gray-900/20 to-[#055DBF]/10 backdrop-blur-xs`}>
         { isAuthenticated && <Navbar />}
         <main className="flex-1 overflow-y-auto p-4 ">
           <Suspense fallback={<Spinner />}>
@@ -43,6 +48,7 @@ function App() {
                 <Route path="/salt" element={<SaltManagement />} />
                 <Route path="/config" element={<SystemConfig />} />
                 <Route path="/users" element={<UserManagement />} />
+                <Route path="/orders" element={<Orders />} />
               </Route>
               <Route path="*" element={<NotFound />} />
             </Routes>
