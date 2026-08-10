@@ -24,11 +24,11 @@ export default function Login() {
     try {
         
       const { access_token, user } = await login(email, password);
-  
       setAuth(access_token, user);
       navigate('/');
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (err: any) {
-      setError(err.response?.data?.error || 'Échec de connexion');
+      setError(err);
     } finally {
       setLoading(false);
     }
@@ -49,8 +49,8 @@ return (
     {/* CARTE LOGIN */}
     <div className={`
       w-full
-      max-w-[900px]
-      h-[520px]
+      max-w-225
+      h-130
       ${bg}
       border
       border-[#12304a]
@@ -171,13 +171,13 @@ return (
 
 
       {/* FORMULAIRE DROIT */}
-      <div className="
-        w-1/2
-        px-12
-        flex
-        flex-col
-        justify-center
-      ">
+        <div className="
+        w-1/2 
+        px-10 
+        flex 
+        flex-col 
+        justify-center 
+        bg-gray-900/30">
 
 
         <h2 className="
@@ -223,14 +223,15 @@ return (
               type="email"
               value={email}
               onChange={(e)=>setEmail(e.target.value)}
+              placeholder="admin@aquasmart.com"
               className="
                 w-full
                 h-10
-                rounded-lg
+                rounded-xl
                 bg-gray-900/50 
                 border
                 border-[#055DBF]/20
-                px-3
+                px-6
                 text-white
                 text-sm
                 outline-none
