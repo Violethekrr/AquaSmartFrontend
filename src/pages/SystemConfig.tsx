@@ -3,9 +3,8 @@
 // ============================================
 
 import React, { useEffect, useState } from 'react';
-import { 
-  Settings, Save, RotateCcw, Edit, Check, X,
-  Search, Filter, Plus, Trash2, AlertCircle
+import { Save, RotateCcw, Edit, Check, X,
+  Search, Filter,   AlertCircle
 } from 'lucide-react';
 import api from '../services/api';
 

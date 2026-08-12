@@ -44,7 +44,7 @@ const formatNumber = (n: number | null | undefined) => {
 
 const StatBlock = ({ icon, iconColor, label, value }: any) => (
   <div className="border border-[#12304a] rounded-lg p-3 flex items-center gap-3">
-    <div className="p-2 bg-[#055DBF]/10 rounded-lg shrink-0">
+    <div className={`p-2 bg-[#055DBF]/10 ${iconColor} rounded-lg shrink-0`}>
       {icon}
     </div>
     <div>

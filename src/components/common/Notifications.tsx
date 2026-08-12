@@ -3,8 +3,7 @@
 // ============================================
 
 import React from 'react';
-import { Bell, X, Clock, AlertCircle, AlertTriangle, CheckCircle, Info, CheckCheck } from 'lucide-react';
-import api from '../../services/api';
+import { Bell, X,  AlertCircle, AlertTriangle, CheckCircle, Info, CheckCheck } from 'lucide-react';
 
 interface Notification {
   id: number;

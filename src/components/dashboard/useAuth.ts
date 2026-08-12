@@ -1,4 +1,4 @@
-import { useAuthStore } from '../store/authSlice';
+import { useAuthStore } from '../../store/authSlice';
 
 export const useAuth = () => {
   const { token, user, setAuth, logout } = useAuthStore();

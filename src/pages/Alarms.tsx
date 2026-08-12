@@ -2,7 +2,7 @@
 // Alarms.tsx - Gestion des alarmes
 // ============================================
 
-import React, { useEffect, useState } from 'react';
+import  { useEffect, useState } from 'react';
 import {
   AlertCircle, AlertTriangle, Info,
   Search, X, Clock, CheckCheck

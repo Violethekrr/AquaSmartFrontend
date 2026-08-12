@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { 
   ShoppingCart, Package, CheckCircle, Clock, XCircle, 
-  Search, Filter, Eye, Truck
+  Search, Truck
 } from 'lucide-react';
 import api from '../services/api';
 

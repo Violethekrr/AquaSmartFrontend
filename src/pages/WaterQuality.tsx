@@ -6,7 +6,7 @@ import React, { useEffect, useState } from 'react';
 import {
   Droplets, Waves, Thermometer, Activity,
   CheckCircle, AlertTriangle, AlertCircle,
-  Search, X, Download
+  Search, X
 } from 'lucide-react';
 import {
   LineChart, Line, XAxis, YAxis, CartesianGrid,

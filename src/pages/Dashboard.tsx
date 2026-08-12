@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import {
   AlertCircle, AlertTriangle, Info,
-  Droplets, Gauge, TrendingUp, CheckCircle
+  Droplets, Gauge, TrendingUp
 } from 'lucide-react';
 import {
   LineChart, Line, XAxis, YAxis, CartesianGrid,
@@ -77,8 +77,7 @@ export default function Dashboard() {
   }));
 
   const pressure = sensors.find((s) => s.sensor_type === 'pressure');
-  const flow = sensors.find((s) => s.sensor_type === 'flow');
-  const saltLevel = sensors.find((s) => s.sensor_type === 'level');
+   const saltLevel = sensors.find((s) => s.sensor_type === 'level');
   const unacknowledgedAlarms = alarms.filter((a) => !a.acknowledged).length;
 
   // Calcul de la consommation totale du jour (dernier rapport)

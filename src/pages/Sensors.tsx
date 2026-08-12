@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { 
   Activity, Droplets, Thermometer, Gauge, Waves, Zap, Battery, 
   TrendingUp, AlertCircle, CheckCircle, AlertTriangle, Info,
-  Filter, X, Search
+   X, Search
 } from 'lucide-react';
 import api from '../services/api';
 
@@ -57,7 +57,7 @@ export default function Sensors() {
         setFilteredSensors(response.data);
       } catch (err: any) {
         setError(err.response?.data?.detail || 'Erreur lors du chargement des données');
-        console.error('Erreur API:', err);
+        console.error('Erreur API:', err+showFilters);
       } finally {
         setLoading(false);
       }

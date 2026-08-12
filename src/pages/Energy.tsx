@@ -2,8 +2,8 @@
 // Energy.tsx - Gestion énergétique (100% données réelles)
 // ============================================
 
-import React, { useEffect, useState } from 'react';
-import { Zap, Battery, Sun, CheckCircle, Download } from 'lucide-react';
+import  { useEffect, useState } from 'react';
+import { Zap, Battery, Sun, CheckCircle } from 'lucide-react';
 import {
   BarChart, Bar, XAxis, YAxis, CartesianGrid,
   Tooltip, ResponsiveContainer
