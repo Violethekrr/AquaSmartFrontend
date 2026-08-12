@@ -2,7 +2,7 @@ import axios from 'axios';
 import { useAuthStore } from '../store/authSlice';
 
 const api = axios.create({
-  baseURL: 'http://127.0.0.1:8000/api',  // ← URL de ton backend
+  baseURL: 'https://aquasmartbackend.onrender.com/api',  // ← URL de ton backend
   headers: {
     'Content-Type': 'application/json',
   },
