@@ -2,9 +2,9 @@
 // SystemConfig.tsx - Configuration système
 // ============================================
 
-import React, { useEffect, useState } from 'react';
-import { Save, RotateCcw, Edit, Check, X,
-  Search, Filter,   AlertCircle
+import { useEffect, useState } from 'react';
+import { RotateCcw, Edit, Check, X,
+  Search,    AlertCircle
 } from 'lucide-react';
 import api from '../services/api';
 

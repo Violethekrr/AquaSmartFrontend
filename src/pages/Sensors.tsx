@@ -47,8 +47,7 @@ export default function Sensors() {
   const [filterType, setFilterType] = useState('all');
   const [filterStatus, setFilterStatus] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
-  const [showFilters, setShowFilters] = useState(false);
-
+ 
   useEffect(() => {
     const fetchSensors = async () => {
       try {
@@ -57,7 +56,7 @@ export default function Sensors() {
         setFilteredSensors(response.data);
       } catch (err: any) {
         setError(err.response?.data?.detail || 'Erreur lors du chargement des données');
-        console.error('Erreur API:', err+showFilters);
+        console.error('Erreur API:', err);
       } finally {
         setLoading(false);
       }
